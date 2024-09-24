@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -10,6 +12,11 @@
     "@types/node": "^16.18.108",
     "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
+    "ajv": "^6.12.6",
+    "ajv-keywords": "^3.5.2",
+    "feather-icons": "^4.29.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.7.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -26,6 +33,23 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "globals": {
+      "$": "readonly",
+      "jQuery": "readonly",
+      "feather": "readonly"
+    },
+    "overrides": [
+      {
+        "files": [
+          "src/assets/js/jquery.js",
+          "src/assets/js/bootsnav.js",
+          "src/assets/js/custom.js"
+        ],
+        "rules": {
+          "no-unused-expressions": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -39,5 +63,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.30",
+    "react-router-dom": "^6.26.2"
   }
 }
