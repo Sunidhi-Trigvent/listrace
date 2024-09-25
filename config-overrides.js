@@ -20,5 +20,8 @@ module.exports = function override(config, env) {
     })
   );
 
+  // Disable source maps
+  config.devtool = false; // Set to false to disable source maps
+
   return config;
 };

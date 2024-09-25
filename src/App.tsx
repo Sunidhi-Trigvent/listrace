@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import MainLayout from "./views/layout/index";
 
 import "./assets/css/fonts/slick.svg";
@@ -16,6 +16,11 @@ import "./assets/css/bootstrap.min.css";
 
 import "./assets/js/bootsnav"; // Import Bootsnav
 import "./assets/js/custom"; // Import custom scripts
+
+import "./assets/js/slick.min.js";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel";
 
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
@@ -36,10 +41,6 @@ declare global {
 window.$ = window.jQuery = $;
 
 function App() {
-  useEffect(() => {
-    feather.replace(); // Initialize Feather Icons
-  }, []);
-
   return <MainLayout />;
 }
 
