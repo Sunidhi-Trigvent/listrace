@@ -23,5 +23,10 @@ module.exports = function override(config, env) {
   // Disable source maps
   config.devtool = false; // Set to false to disable source maps
 
+  // Optional: Adjust performance hints (if needed)
+  config.performance = {
+    hints: false, // Disable performance hints (optional)
+  };
+
   return config;
 };

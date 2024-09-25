@@ -1,7 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Toparea from "./toparea";
 
 function Index() {
+  const [isSticky, setIsSticky] = useState(false);
+
+  const handleScroll = () => {
+    // Check if the page has been scrolled down
+    if (window.scrollY > 0) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
+
+  useEffect(() => {
+    // Attach the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Toparea />
@@ -10,7 +31,9 @@ function Index() {
         <div className="header-area">
           {/* Start Navigation */}
           <nav
-            className="navbar navbar-default bootsnav navbar-sticky navbar-scrollspy"
+            className={`navbar navbar-default bootsnav navbar-scrollspy ${
+              isSticky ? "sticky" : ""
+            }`}
             data-minus-value-desktop="70"
             data-minus-value-mobile="55"
             data-speed="1000"

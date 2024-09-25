@@ -1158,4 +1158,25 @@ nav.navbar.bootsnav .navbar-toggle i {
     bottom: 7px;
   }
 }
+
+/* Add this to your CSS file */
+.header-area {
+  position: relative;
+  width: 100%;
+  z-index: 1000; /* Ensures header is on top */
+}
+
+.navbar {
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.navbar.sticky {
+  position: fixed; /* Make the header fixed */
+  top: 0; /* Stick to the top */
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+  background-color: #fff; /* Background color for visibility */
+}
+
 /*========================Thank you=================*/
