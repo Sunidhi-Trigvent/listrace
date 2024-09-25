@@ -14,20 +14,24 @@
     "@types/react-dom": "^18.3.0",
     "ajv": "^6.12.6",
     "ajv-keywords": "^3.5.2",
+    "bootstrap": "^5.3.3",
     "feather-icons": "^4.29.2",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.7.1",
+    "jquery": "^2.2.4",
+    "jquery.counterup": "^2.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
+    "slick-carousel": "^1.8.1",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "waypoints": "^4.0.1",
+    "web-vitals": "^2.1.4",
+    "webpack": "^5.94.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test"
   },
   "eslintConfig": {
     "extends": [
@@ -65,7 +69,9 @@
     ]
   },
   "devDependencies": {
+    "@types/feather-icons": "^4.29.4",
     "@types/jquery": "^3.5.30",
+    "react-app-rewired": "^2.2.1",
     "react-router-dom": "^6.26.2"
   }
 }

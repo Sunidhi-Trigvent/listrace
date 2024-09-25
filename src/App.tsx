@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MainLayout from "./views/layout/index";
 
 import "./assets/css/fonts/slick.svg";
+import "./assets/css/ajax-loader.gif";
 import "./assets/css/style.css";
 import "./assets/css/animate.css";
 import "./assets/css/bootsnav.css";
@@ -11,37 +12,34 @@ import "./assets/css/linearicons.css";
 import "./assets/css/responsive.css";
 import "./assets/css/slick-theme.css";
 import "./assets/css/slick.css";
-import "./assets/images/blog/b1.jpg";
+import "./assets/css/bootstrap.min.css";
 
-// // Import jQuery
-// import $ from "jquery";
+import "./assets/js/bootsnav"; // Import Bootsnav
+import "./assets/js/custom"; // Import custom scripts
 
-// // Importing assets like images and fonts (ensure Webpack is configured to handle these).
-// // import "./assets/css/ajax-loader.gif";
-// import "./assets/css/fonts/slick.svg";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-// // Import custom JavaScript (which likely depends on jQuery)
-// import "./assets/js/bootsnav";
-// import "./assets/js/custom";
+import $ from "jquery";
+import "slick-carousel"; // Import Slick Carousel
+import feather from "feather-icons"; // Import Feather Icons
+import "jquery.counterup";
 
-// // Import Font Awesome CSS
-// import "font-awesome/css/font-awesome.min.css";
+import "waypoints/lib/jquery.waypoints";
 
-// // Import custom App CSS
-// import "./App.css";
+declare global {
+  interface Window {
+    $: JQueryStatic;
+    jQuery: JQueryStatic;
+  }
+}
 
-// // Extend the global Window interface to include jQuery and $
-// declare global {
-//   interface Window {
-//     jQuery: typeof $;
-//     $: typeof $;
-//   }
-// }
-
-// // Ensure jQuery is accessible globally if needed
-// window.$ = window.jQuery = $;
+window.$ = window.jQuery = $;
 
 function App() {
+  useEffect(() => {
+    feather.replace(); // Initialize Feather Icons
+  }, []);
+
   return <MainLayout />;
 }
 

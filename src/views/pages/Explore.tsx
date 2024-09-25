@@ -11,7 +11,7 @@ function Explore() {
               Explore New place, food, culture around the world and many more
             </p>
           </div>
-          /*.....*/
+
           <div className="explore-content">
             <div className="row">
               <div className="col-md-4 col-sm-6">
